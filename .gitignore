@@ -409,3 +409,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /.idea/
+
+# Local environment
+.env
+
+# Plugin directory
+/.quarkus/cli/plugins/
