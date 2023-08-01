@@ -2,21 +2,26 @@ package br.nom.penha.bruno.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class OurPrincipalProduct {
 
 
     private Long id;
 
+    @NotNull(message = "You must inform the description")
     @NotBlank(message = "Description field can not be empty")
     private String description;
 
+    @NotNull(message = "You must inform the label")
     @NotBlank(message = "Label field can not be empty")
     private String label;
 
+    @NotNull(message = "You must inform the quantity")
     @Min(message = "Quantity can not be zero", value = 1)
     private Integer quantity;
 
+    @NotNull(message = "You must inform the price")
     @Min(message = "Price have to be higher than zero", value = 1)
     private Double price;
 
